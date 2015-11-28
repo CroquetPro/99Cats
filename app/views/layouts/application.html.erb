@@ -13,15 +13,13 @@
 <% end %>
 <% end %>
 <%= current_user.user_name if current_user %>
+
 <% if current_user %>
-  <!-- <% url, log = '/session', 'logout' %> -->
   <%= button_to "Logout", '/session', method: :delete  %>
   <% else %>
   <%= link_to "Login", new_session_url %>
 <% end %>
-<!-- <form action="<%= url %>">
-    <input type="submit" value="<%= log %>">
-</form> -->
+
 <%= yield %>
 
 </body>
